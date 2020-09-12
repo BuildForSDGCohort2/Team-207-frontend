@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "175658048445",
+    "firebase_url": "https://afroapp-6da94.firebaseio.com",
+    "project_id": "afroapp-6da94",
+    "storage_bucket": "afroapp-6da94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175658048445:android:9365547685544e149d90d4",
+        "android_client_info": {
+          "package_name": "com.alice.afroapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175658048445-gvk4fpfomfh13rs2mb16ksiit8nur8fm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alice.afroapp",
+            "certificate_hash": "09ef8d52c108dbe9ef19bb7f7dcb8bf1632d763e"
+          }
+        },
+        {
+          "client_id": "175658048445-ipk2k60e30829f0qudtk84k6o87tc9cn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9ExjC4ezDisujdRbKz9QUtDQcVMy3fR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175658048445-ipk2k60e30829f0qudtk84k6o87tc9cn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

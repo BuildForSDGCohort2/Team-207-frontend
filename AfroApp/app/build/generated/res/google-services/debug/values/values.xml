@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">175658048445-ipk2k60e30829f0qudtk84k6o87tc9cn.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://afroapp-6da94.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">175658048445</string>
+    <string name="google_api_key" translatable="false">AIzaSyB9ExjC4ezDisujdRbKz9QUtDQcVMy3fR0</string>
+    <string name="google_app_id" translatable="false">1:175658048445:android:9365547685544e149d90d4</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB9ExjC4ezDisujdRbKz9QUtDQcVMy3fR0</string>
+    <string name="google_storage_bucket" translatable="false">afroapp-6da94.appspot.com</string>
+    <string name="project_id" translatable="false">afroapp-6da94</string>
+</resources>

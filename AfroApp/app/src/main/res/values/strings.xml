@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AfroApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="View_questions">Vie_questions</string>
+    <string name="Comments">Comments</string>
+    <string name="title_activity_listquestions">Listquestions</string>
+    <string name="title_activity_listcomments">Listcomments</string>
+    <string name="View_list">View_list</string>
+</resources>
