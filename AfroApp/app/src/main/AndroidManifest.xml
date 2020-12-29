@@ -6,13 +6,14 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".AfroApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/AfroDevMeet"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".AfroApp"
         android:theme="@style/AppTheme">
+        <activity android:name=".EditActivity"></activity>
         <activity
             android:name=".MyProfile"
             android:label="@string/title_activity_my_profile"
@@ -42,9 +43,7 @@
             android:name=".SolutionsActivity"
             android:label="Solutions"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/AfroDevMeet">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

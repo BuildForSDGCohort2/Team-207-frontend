@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -38,6 +39,7 @@ public class Prof extends AppCompatActivity {
     private TextView fullname,proficiency,location,email;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
+    private FirebaseAuth mFirebaseAuth;
     private ChildEventListener mChildEventListerner;
     private ValueEventListener mValueEventListener;
     private ArrayList<Mentor> mentors;
@@ -59,6 +61,8 @@ public class Prof extends AppCompatActivity {
         location = (TextView) findViewById(R.id.loc_text);
         email = (TextView) findViewById(R.id.email_addtext);
         circleImageView = (CircleImageView) findViewById(R.id.circleImage);
+
+        mFirebaseAuth = FirebaseAuth.getInstance();
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference().child("Mentors");
@@ -83,7 +87,6 @@ public class Prof extends AppCompatActivity {
                             .placeholder(R.drawable.ic_account_circle_black_24dp).into(circleImageView);
                 }
 
-
             }
 
             @Override
@@ -92,10 +95,8 @@ public class Prof extends AppCompatActivity {
             }
         });
 
-        Picasso.with(this).load(imageUrl)
-               .placeholder(R.drawable.ic_account_circle_black_24dp).into(circleImageView);
-    }
 
+    }
 
 
     @Override

@@ -5,8 +5,10 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,9 +20,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MentorList extends AppCompatActivity {
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
+    private FirebaseAuth mFirebaseAuth;
+    private CircleImageView circleImageView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +36,7 @@ public class MentorList extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.ic_code_black_18dp);
+        getSupportActionBar().setIcon(R.drawable.sidetitle);
 
         RecyclerView mentor_list = (RecyclerView) findViewById(R.id.mentor_list);
 
@@ -39,6 +46,15 @@ public class MentorList extends AppCompatActivity {
         mentor_list.setLayoutManager(messageLayoutManager);
         final MentorAdapter adapter = new MentorAdapter();
         mentor_list.setAdapter(adapter);
+
+
+        mFirebaseAuth = FirebaseAuth.getInstance();
+
+//        circleImageView = (CircleImageView) findViewById(R.id.circleImage);
+//        String imageUrl = mFirebaseAuth.getCurrentUser().getPhotoUrl().toString();
+//        Picasso.with(this).load(imageUrl)
+//               .placeholder(R.drawable.ic_account_circle_black_24dp).into(circleImageView);
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

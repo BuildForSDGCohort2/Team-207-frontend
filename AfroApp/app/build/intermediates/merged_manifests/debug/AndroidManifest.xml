@@ -25,6 +25,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.alice.afroapp.EditActivity" />
         <activity
             android:name="com.alice.afroapp.MyProfile"
             android:label="@string/title_activity_my_profile"
@@ -54,9 +55,7 @@
             android:name="com.alice.afroapp.SolutionsActivity"
             android:label="Solutions"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.alice.afroapp.MainActivity"
-            android:label="@string/AfroDevMeet" >
+        <activity android:name="com.alice.afroapp.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

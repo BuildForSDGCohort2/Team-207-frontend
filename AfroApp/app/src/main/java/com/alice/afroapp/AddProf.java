@@ -23,6 +23,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -47,7 +50,7 @@ public class AddProf extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.ic_code_black_18dp);
+        getSupportActionBar().setIcon(R.drawable.sidetitle);
 
 
         //initializing views
@@ -61,8 +64,6 @@ public class AddProf extends AppCompatActivity {
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference().child("mentors");
-        storage = FirebaseStorage.getInstance();
-        storageReference = storage.getReference();
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -76,8 +77,6 @@ public class AddProf extends AppCompatActivity {
         String imageUrl = mFirebaseAuth.getCurrentUser().getPhotoUrl().toString();
         Picasso.with(this).load(imageUrl)
                 .placeholder(R.drawable.ic_account_circle_black_24dp).into(circleImageView);
-
-
 
 
     }
@@ -98,6 +97,9 @@ public class AddProf extends AppCompatActivity {
             case R.id.action_home:
                 GoHome();
                 return true;
+            case R.id.action_myprofile:
+                GoProf();
+                return true;
             case R.id.action_list:
                 GoList();
                 return true;
@@ -111,7 +113,7 @@ public class AddProf extends AppCompatActivity {
     }
 
     public void GoProf(){
-        Intent intent= new Intent(AddProf.this,Prof.class);
+        Intent intent= new Intent(AddProf.this,MyProfile.class);
         startActivity(intent);
     }
 
@@ -132,20 +134,23 @@ public class AddProf extends AppCompatActivity {
         String imageUrl = mFirebaseAuth.getCurrentUser().getPhotoUrl().toString();
         String username = mFirebaseAuth.getCurrentUser().getDisplayName();
         Database database = new Database();
-        database.setMentor(fullname,proficiency,location,email,imageUrl,"");
 
-        Intent intent= new Intent(AddProf.this,MentorList.class);
-        startActivity(intent);
+        if(mDatabaseReference.push().getKey()== null){
+
+            database.setMentor(fullname,proficiency,location,email,imageUrl,
+                    "");
+            String pushId=mDatabaseReference.push().getKey();
+            Intent intent = new Intent(AddProf.this, MyProfile.class);
+            intent.putExtra("pushId",pushId);
+            startActivity(intent);
+        }
+
+        else{
+            Toast.makeText(AddProf.this,
+                    "profile already exist",Toast.LENGTH_LONG).show();
+
+        }
 
     }
 
-
-
-    public void MyProfile(){
-        String username = mFirebaseAuth.getCurrentUser().getDisplayName();
-        Intent intent = new Intent(AddProf.this, MyProfile.class);
-        intent.putExtra("name",username);
-        startActivity(intent);
-
-    }
 }

@@ -11,7 +11,7 @@
 
     <item
         android:id="@+id/action_signout"
-        android:icon="@drawable/ic_account_box_black_24dp"
+        android:icon="@drawable/ic_lock_white_18dp"
         android:title="@string/Signout" />
     <item
         android:id="@+id/action_profile"

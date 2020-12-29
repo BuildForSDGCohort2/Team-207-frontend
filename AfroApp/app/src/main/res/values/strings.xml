@@ -50,4 +50,6 @@
     <string name="SignUp">SignUp</string>
     <string name="title_activity_my_profile">MyProfile</string>
     <string name="Add_post">Add_post</string>
+    <string name="myprofile">myprofile</string>
+    <string name="delete">delete</string>
 </resources>

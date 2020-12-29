@@ -32,7 +32,7 @@ public class Post extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         getSupportActionBar().getThemedContext();
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.ic_code_black_18dp);
+        getSupportActionBar().setIcon(R.drawable.sidetitle);
 
 
         editQuestiion  = (EditText) findViewById(R.id.editQuestion);
@@ -99,13 +99,16 @@ public class Post extends AppCompatActivity {
         String username = mFirebaseAuth.getCurrentUser().getDisplayName();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         Database datbase = new Database();
-        datbase.setQuestion(username,title);
-//        mDatabaseReference = mFirebaseDatabase.getReference().child("Questions");
-//        mDatabaseReference.child("Questions").push().setValue(question);
-        Intent intent= new Intent(Post.this,QuestionsActivity.class);
-        startActivity(intent);
+        if(editQuestiion != null ){
+            datbase.setQuestion(username,title);
+        }
+        else {
+            Toast.makeText(this,"enter question",Toast.LENGTH_LONG).show();
 
-         Toast.makeText(this,"Posted.",Toast.LENGTH_LONG).show();
+        }
+//        Intent intent= new Intent(Post.this,QuestionsActivity.class);
+//        startActivity(intent);
+
 
     }
 

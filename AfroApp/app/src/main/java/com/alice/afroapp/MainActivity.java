@@ -52,18 +52,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
-       // AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder()
-        //        .build();
+
         mFirebaseAuth = FirebaseAuth.getInstance();
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.ic_account_circle_black_24dp);
-        String name = mFirebaseAuth.getCurrentUser().getDisplayName();
+        getSupportActionBar().setIcon(R.drawable.sidetitle);
 
-        getSupportActionBar().setTitle(name);
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController);
-        NavigationUI.setupWithNavController(navView, navController);
+
+
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+//        NavigationUI.setupActionBarWithNavController(this, navController);
+//        NavigationUI.setupWithNavController(navView, navController);
         circleImageView = (CircleImageView) findViewById(R.id.circleImage);
 
         mAuth = new FirebaseAuth.AuthStateListener() {

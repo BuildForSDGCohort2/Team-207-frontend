@@ -979,6 +979,9 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen imageview_height
+dimen imageview_size
+dimen imageview_width
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
@@ -1045,6 +1048,8 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen profend
+dimen profstart
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
@@ -1145,6 +1150,7 @@ drawable addprof
 drawable afronew
 drawable app_logo
 drawable applog
+drawable apptitle
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_shape
@@ -1199,6 +1205,8 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dev
+drawable devs
+drawable devv
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_apple_white_24dp
 drawable fui_ic_check_circle_black_128dp
@@ -1222,6 +1230,7 @@ drawable fui_idp_button_background_twitter
 drawable fui_idp_button_background_yahoo
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable htitle
 drawable ic_account_box_black_24dp
 drawable ic_account_circle_black_24dp
 drawable ic_add_black_24dp
@@ -1276,6 +1285,8 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable placeholder
+drawable side
+drawable sidetitle
 drawable submitt_shape
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1286,7 +1297,6 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
-id acc_image
 id action0
 id action_back_home
 id action_bar
@@ -1298,8 +1308,10 @@ id action_bar_subtitle
 id action_bar_title
 id action_container
 id action_context_bar
+id action_delete
 id action_divider
 id action_edit
+id action_goback
 id action_home
 id action_image
 id action_list
@@ -1308,6 +1320,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_myprofile
 id action_profile
 id action_questions_list
 id action_set
@@ -1339,6 +1352,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_holder
 id button
+id button2
 id button3
 id buttonPanel
 id button_continue
@@ -1397,11 +1411,16 @@ id divider2
 id divider3
 id divider4
 id divider5
+id divider6
+id divider7
+id divider8
+id divider9
 id dynamic
 id editEmail
 id editLoc
 id editName
 id editProf
+id editProficiency
 id editQuestion
 id edit_phone_number
 id edit_query
@@ -1450,11 +1469,17 @@ id image
 id imageButton
 id imageButton2
 id imageView
+id imageView10
+id imageView11
+id imageView12
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id imageView6
 id imageView7
+id imageView8
+id imageView9
 id info
 id inline
 id invisible
@@ -1490,7 +1515,6 @@ id myprof_pic
 id name
 id name_layout
 id nav_controller_view_tag
-id nav_host_fragment
 id nav_view
 id navigation_dashboard
 id navigation_header_container
@@ -1695,6 +1719,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add
+layout activity_edit
 layout activity_main
 layout activity_mentor_list
 layout activity_my_profile
@@ -1787,6 +1812,7 @@ menu go_home
 menu home_menu
 menu mentor_menu
 menu mentorprofie
+menu my_profile_menu
 menu post_question_menu
 menu profile_add_menu
 mipmap ic_launcher
@@ -1895,6 +1921,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
+string delete
 string email
 string email_address
 string fab_transformation_scrim_behavior
@@ -2010,6 +2037,7 @@ string location
 string logo_image
 string mentor_pic
 string mtrl_chip_close_icon_content_description
+string myprofile
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string password_toggle_content_description

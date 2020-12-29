@@ -3,4 +3,9 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="profstart">32dp</dimen>
+    <dimen name="profend">32dp</dimen>
+    <dimen name="imageview_size">36dp</dimen>
+    <dimen name="imageview_height">36dp</dimen>
+    <dimen name="imageview_width">36dp</dimen>
 </resources>

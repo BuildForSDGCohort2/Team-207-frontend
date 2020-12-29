@@ -9,8 +9,14 @@
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/action_myprofile"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="@string/myprofile"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/action_list"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_list_black_24dp"
         android:title="@string/View_list"
         app:showAsAction="never" />
 
