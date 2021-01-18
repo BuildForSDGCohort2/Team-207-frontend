@@ -52,4 +52,7 @@
     <string name="Add_post">Add_post</string>
     <string name="myprofile">myprofile</string>
     <string name="delete">delete</string>
+    <string name="save">save</string>
+    <string name="arrow">arrow</string>
+    <string name="Proficiency">Proficiency</string>
 </resources>

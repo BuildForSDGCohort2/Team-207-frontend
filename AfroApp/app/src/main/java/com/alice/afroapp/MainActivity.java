@@ -36,6 +36,7 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
+
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
     private FirebaseAuth mFirebaseAuth;
@@ -149,7 +150,8 @@ public class MainActivity extends AppCompatActivity {
 
     //function to go to listActivity
     public void ViewList(MenuItem item) {
-        Intent intent= new Intent(MainActivity.this,QuestionsActivity.class);
+        Intent intent= new Intent(MainActivity.this,
+                QuestionsActivity.class);
         startActivity(intent);
         Toast.makeText(this,"Questions list.",Toast.LENGTH_LONG).show();
     }
@@ -176,12 +178,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void MentorSignUp(MenuItem item) {
-        Intent intent= new Intent(MainActivity.this,AddProf.class);
+        Intent intent= new Intent
+                (MainActivity.this,AddProf.class);
         startActivity(intent);
     }
 
     public void Post(){
-        Intent intent= new Intent(MainActivity.this,Post.class);
+        Intent intent= new Intent(
+                MainActivity.this,Post.class);
         startActivity(intent);
     }
 

@@ -30,6 +30,7 @@ import org.w3c.dom.Text;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AddProf extends AppCompatActivity {
+
     private static final int PICK_IMAGE_REQUEST = 22;
     private FirebaseDatabase mFirebaseDatabase;
     private  DatabaseReference mDatabaseReference;
@@ -76,12 +77,12 @@ public class AddProf extends AppCompatActivity {
 
         String imageUrl = mFirebaseAuth.getCurrentUser().getPhotoUrl().toString();
         Picasso.with(this).load(imageUrl)
-                .placeholder(R.drawable.ic_account_circle_black_24dp).into(circleImageView);
+                .placeholder(R.drawable.ic_account_circle_black_24dp).
+                into(circleImageView);
 
 
     }
-    public void Viewprofile(){
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -112,18 +113,12 @@ public class AddProf extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void GoProf(){
-        Intent intent= new Intent(AddProf.this,MyProfile.class);
-        startActivity(intent);
-    }
 
 
     public void GoList(){
         Intent intent= new Intent(AddProf.this,MentorList.class);
         startActivity(intent);
     }
-
-
 
 
     public void SaveMentor(){
@@ -139,6 +134,7 @@ public class AddProf extends AppCompatActivity {
 
             database.setMentor(fullname,proficiency,location,email,imageUrl,
                     "");
+
             String pushId=mDatabaseReference.push().getKey();
             Intent intent = new Intent(AddProf.this, MyProfile.class);
             intent.putExtra("pushId",pushId);
@@ -151,6 +147,13 @@ public class AddProf extends AppCompatActivity {
 
         }
 
+    }
+
+    public void GoProf(){
+        String pushId=mDatabaseReference.push().getKey();
+        Intent intent = new Intent(AddProf.this, MyProfile.class);
+        intent.putExtra("pushId",pushId);
+        startActivity(intent);
     }
 
 }

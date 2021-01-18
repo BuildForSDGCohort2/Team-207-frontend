@@ -25,11 +25,11 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circleImage"
-            android:layout_width="35dp"
-            android:layout_height="10dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:src="@drawable/ic_account_circle_black_24dp"
-            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_color="#FFFFFF"
             app:civ_border_width="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,8 +39,8 @@
             android:id="@+id/fullname_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:text="@string/full_name"
+            android:layout_marginStart="@dimen/recycler_marginstart"
+            android:text="@string/Fullname"
             app:layout_constraintStart_toEndOf="@+id/circleImage"
             app:layout_constraintTop_toTopOf="@+id/circleImage" />
 
@@ -48,8 +48,8 @@
             android:id="@+id/prof_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="@string/proficiency"
+            android:layout_marginEnd="@dimen/recycler_marginend"
+            android:text="@string/Proficiency"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/fullname_text" />
 
@@ -57,7 +57,7 @@
             android:id="@+id/loc_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="@dimen/recycler_marginend"
             android:text="@string/location"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/prof_text" />

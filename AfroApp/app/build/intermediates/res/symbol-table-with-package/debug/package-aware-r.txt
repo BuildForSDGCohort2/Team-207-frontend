@@ -882,6 +882,12 @@ dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen addprof_divmargin
+dimen addprof_endwidth
+dimen addprof_height
+dimen addprof_marginwidth
+dimen addprof_textSize
+dimen addprof_width
 dimen browser_actions_context_menu_max_width
 dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
@@ -956,6 +962,8 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen divider_width
+dimen editwidth
 dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
@@ -979,12 +987,19 @@ dimen hint_alpha_material_dark
 dimen hint_alpha_material_light
 dimen hint_pressed_alpha_material_dark
 dimen hint_pressed_alpha_material_light
+dimen home_button_width
+dimen home_buttonheight
+dimen home_buttontop_margin
 dimen imageview_height
 dimen imageview_size
 dimen imageview_width
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen logo_imageheight
+dimen logo_imagewidth
+dimen main_buttonheight
+dimen main_buttonwidth
 dimen mtrl_bottomappbar_fabOffsetEndMode
 dimen mtrl_bottomappbar_fab_cradle_margin
 dimen mtrl_bottomappbar_fab_cradle_rounded_corner_radius
@@ -1048,8 +1063,11 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen post_noteheight
 dimen profend
 dimen profstart
+dimen recycler_marginend
+dimen recycler_marginstart
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
@@ -1422,6 +1440,7 @@ id editName
 id editProf
 id editProficiency
 id editQuestion
+id editText2
 id edit_phone_number
 id edit_query
 id email
@@ -1563,6 +1582,7 @@ id root
 id s_edit_text
 id s_enter_button
 id s_user_name
+id saveButton
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1828,6 +1848,7 @@ string Emaik_Add
 string Email_Add
 string Fullname
 string Mentor
+string Proficiency
 string SignUp
 string Signout
 string View_list
@@ -1874,6 +1895,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string appbar_scrolling_view_behavior
+string arrow
 string back_home
 string bottom_sheet_behavior
 string character_counter_content_description
@@ -2053,6 +2075,7 @@ string profile
 string project_id
 string question
 string question_solu
+string save
 string search_menu_title
 string send_post
 string solution

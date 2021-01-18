@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="@dimen/profend"
-    android:layout_marginTop="24dp"
+    android:layout_marginTop="32dp"
     android:layout_marginRight="@dimen/profstart"
-    android:layout_marginBottom="@dimen/profend"
+    android:layout_marginBottom="40dp"
     android:background="@drawable/circular_bordershape"
 
     tools:context=".EditActivity">
 
     <ImageView
         android:id="@+id/myprof_pic"
-        android:layout_width="230dp"
-        android:layout_height="169dp"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/mentor_pic"
         android:tint="@color/colorPrimary"
@@ -27,8 +27,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImage"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="230dp"
+        android:layout_height="150dp"
         android:layout_marginTop="24dp"
         android:src="@drawable/ic_account_circle_black_24dp"
         app:civ_border_color="#FFFFFF"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginStart="@dimen/profstart"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="@dimen/profend"
         android:background="#BDBDBD"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,23 +51,10 @@
         app:layout_constraintTop_toBottomOf="@+id/circleImage" />
 
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="85dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="160dp"
-        android:background="@drawable/submitt_shape"
-        android:text="@string/Edit"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/circleImage"
-        app:layout_constraintTop_toTopOf="@+id/myprof_pic" />
-
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="@dimen/imageview_width"
+        android:layout_height="@dimen/imageview_height"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/mentor_pic"
         app:layout_constraintStart_toStartOf="@+id/myprof_pic"
@@ -76,12 +63,12 @@
 
     <EditText
         android:id="@+id/editProf"
-        android:layout_width="120dp"
+        android:layout_width="@dimen/editwidth"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints="@string/title"
         android:background="@drawable/addprof"
         android:ems="10"
-        android:autofillHints="@string/title"
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="@+id/divider"
@@ -110,7 +97,7 @@
 
     <EditText
         android:id="@+id/editProficiency"
-        android:layout_width="120dp"
+        android:layout_width="@dimen/editwidth"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/addprof"
@@ -127,23 +114,25 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="@dimen/profstart"
         android:layout_marginEnd="@dimen/profend"
-        android:background="?android:attr/listDivider"
+        android:background="#BDBDBD"
         app:layout_constraintTop_toBottomOf="@+id/imageView11"
         tools:layout_editor_absoluteX="1dp" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="36dp"
+        android:layout_width="@dimen/imageview_width"
         android:layout_height="@dimen/imageview_height"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/location"
         app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/divider8"
         app:srcCompat="@drawable/ic_location_on_black_24dp" />
 
     <EditText
         android:id="@+id/editLoc"
-        android:layout_width="120dp"
+        android:layout_width="@dimen/editwidth"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@drawable/addprof"
         android:ems="10"
         android:gravity="start|top"
@@ -158,30 +147,43 @@
         android:layout_marginTop="16dp"
         android:layout_marginStart="@dimen/profstart"
         android:layout_marginEnd="@dimen/profend"
-        android:background="?android:attr/listDivider"
+        android:background="#BDBDBD"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         tools:layout_editor_absoluteX="1dp" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="@dimen/imageview_width"
+        android:layout_height="@dimen/imageview_height"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/Email_Add"
         app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/divider9"
         app:srcCompat="@drawable/ic_email_black_24dp" />
 
-    <EditText
-        android:id="@+id/editEmail"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/submitt_shape"
+        android:text="@string/save"
+        android:onClick="editProfile"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="@dimen/editwidth"
+        android:layout_height="wrap_content"
         android:background="@drawable/addprof"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="@+id/divider8"
-        app:layout_constraintTop_toBottomOf="@+id/divider9" />
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/editLoc"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,6 +43,7 @@ public class MyProfile extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth;
     private ImageView imageView;
     private CircleImageView circleImageView;
+    private String editId;
 
 
     @Override
@@ -67,6 +68,7 @@ public class MyProfile extends AppCompatActivity {
 
         Intent intent = getIntent();
         String pushId = intent.getStringExtra("pushId");
+        editId = pushId;
 
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -100,6 +102,7 @@ public class MyProfile extends AppCompatActivity {
                             getValue(String.class).toString());
                     email.setText(postSnapshot.child("email").
                             getValue(String.class).toString());
+
                     String imageUrl = postSnapshot.child("imageUrl").
                             getValue(String.class).toString();
                     Picasso.with(MyProfile.this).load(imageUrl)
@@ -121,7 +124,6 @@ public class MyProfile extends AppCompatActivity {
         });
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -152,10 +154,13 @@ public class MyProfile extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     public void editMentor(){
-        Intent intent= new Intent(MyProfile.this,
+        Intent intent = new Intent(MyProfile.this,
                 EditActivity.class);
+        intent.putExtra("pushId",editId);
         startActivity(intent);
+
     }
 
     public void deleteProfile(){

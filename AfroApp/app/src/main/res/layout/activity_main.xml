@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/logo_image"
-        android:layout_width="265dp"
-        android:layout_height="233dp"
+        android:layout_width="@dimen/logo_imagewidth"
+        android:layout_height="@dimen/logo_imageheight"
         android:layout_marginTop="16dp"
         android:background="@drawable/addprof"
         android:contentDescription="@string/logo_image"
@@ -26,9 +26,9 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="120dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_buttonheight"
+        android:layout_marginTop="@dimen/home_buttontop_margin"
         android:background="@drawable/submitt_shape"
         android:contentDescription="@string/post"
         android:onClick="Posting"
@@ -39,10 +39,11 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="120dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="@dimen/home_button_width"
+        android:layout_height="@dimen/home_buttonheight"
+        android:layout_marginTop="@dimen/home_buttontop_margin"
         android:background="@drawable/submitt_shape"
+        android:contentDescription="@string/arrow"
         app:layout_constraintStart_toStartOf="@+id/logo_image"
         app:layout_constraintTop_toBottomOf="@+id/logo_image"
         app:srcCompat="@drawable/ic_arrow_forward_24px" />
@@ -67,6 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +92,7 @@
         android:layout_width="122dp"
         android:layout_height="14dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"

@@ -113,9 +113,13 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
             profieciency.setText(mentor.getProficiency());
             location.setText(mentor.getLocation());
             String imagerUrl = mentor.getImageUrl();
+            if(imagerUrl!= null){
+                Picasso.with(itemView.getContext())
+                        .load(imagerUrl)
+                        .placeholder(R.drawable.ic_account_circle_black_24dp)
+                        .into(circleImageView);
 
-            Picasso.with(itemView.getContext()).load(imagerUrl)
-                    .placeholder(R.drawable.ic_account_circle_black_24dp).into(circleImageView);
+            }
 
 
         }

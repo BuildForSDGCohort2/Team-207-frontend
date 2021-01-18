@@ -8,4 +8,22 @@
     <dimen name="imageview_size">36dp</dimen>
     <dimen name="imageview_height">36dp</dimen>
     <dimen name="imageview_width">36dp</dimen>
+    <dimen name="editwidth">140dp</dimen>
+    <dimen name="main_buttonwidth">120dp</dimen>
+    <dimen name="main_buttonheight">52dp</dimen>
+    <dimen name="divider_width">300dp</dimen>
+    <dimen name="addprof_width">196dp</dimen>
+    <dimen name="addprof_height">196dp</dimen>
+    <dimen name="addprof_marginwidth">16dp</dimen>
+    <dimen name="addprof_endwidth">16dp</dimen>
+    <dimen name="addprof_divmargin">16dp</dimen>
+    <dimen name="addprof_textSize">18sp</dimen>
+    <dimen name="home_button_width">120dp</dimen>
+    <dimen name="home_buttontop_margin">8dp</dimen>
+    <dimen name="home_buttonheight">52dp</dimen>
+    <dimen name="logo_imagewidth">265dp</dimen>
+    <dimen name="logo_imageheight">233dp</dimen>
+    <dimen name="post_noteheight">45dp</dimen>
+    <dimen name="recycler_marginend">16dp</dimen>
+    <dimen name="recycler_marginstart">32dp</dimen>
 </resources>
