@@ -72,6 +72,7 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot postSnapshot:snapshot.getChildren()){
+
                     String setProf = postSnapshot.child("fullname")
                             .getValue(String.class).toString();
                     editProf.setText(setProf);
@@ -84,9 +85,9 @@ public class EditActivity extends AppCompatActivity {
                             .getValue(String.class).toString();
                     editLoc.setText(setLoc);
 
-                    String setEmail = postSnapshot.child("email")
-                            .getValue(String.class).toString();
-                    editEmail.setText(setEmail);
+//                    String setEmail = postSnapshot.child("email")
+//                            .getValue(String.class).toString();
+//                    editEmail.setText(setEmail);
 
 
                    String imageUrl = postSnapshot.child("imageUrl").
@@ -120,7 +121,6 @@ public class EditActivity extends AppCompatActivity {
 
         Database database = new Database();
         database.setMentor(fullname,proficiency,location,email,imageUrl,"");
-        mDatabaseReference.child(editId).setValue();
 
 
     }

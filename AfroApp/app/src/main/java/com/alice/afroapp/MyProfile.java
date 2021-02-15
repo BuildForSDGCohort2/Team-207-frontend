@@ -94,6 +94,7 @@ public class MyProfile extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot postSnapshot:snapshot.getChildren()){
+
                     fullname.setText(postSnapshot.child("fullname").getValue
                             (String.class).toString());
                     proficiency.setText(postSnapshot.child("proficiency").

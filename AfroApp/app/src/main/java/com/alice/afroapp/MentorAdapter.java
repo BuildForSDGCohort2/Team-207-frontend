@@ -29,6 +29,8 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
     private DatabaseReference mDatabaseReference;
     private ChildEventListener mChildEventListerner;
     private CircleImageView circleImageView;
+    private String imageUr;
+
 
 
 
@@ -41,13 +43,15 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                 Mentor mentor = snapshot.getValue(Mentor.class);
                 mentors.add(mentor);
+                String imagerUrl = mentor.getImageUrl();
+                String imageUr = imagerUrl;
+
                 notifyItemInserted(mentors.size()-1);
             }
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                Mentor mentor = snapshot.getValue(Mentor.class);
-                mentors.add(mentor);
+
 
             }
 
@@ -67,6 +71,7 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
             }
         };
         mDatabaseReference.addChildEventListener(mChildEventListerner);
+
 
 
     }
@@ -89,7 +94,8 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
         return mentors.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder
+            implements View.OnClickListener {
         TextView fullname;
         TextView profieciency;
         TextView location;
@@ -108,6 +114,8 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
            // itemView.setOnClickListener(this);
 
         }
+
+
         public void bind(Mentor mentor){
             fullname.setText(mentor.getFullname());
             profieciency.setText(mentor.getProficiency());
@@ -116,13 +124,15 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
             if(imagerUrl!= null){
                 Picasso.with(itemView.getContext())
                         .load(imagerUrl)
-                        .placeholder(R.drawable.ic_account_circle_black_24dp)
+                        .placeholder(R.drawable.
+                                ic_account_circle_black_24dp)
                         .into(circleImageView);
 
             }
 
 
         }
+
 
         @Override
         public void onClick(View v) {

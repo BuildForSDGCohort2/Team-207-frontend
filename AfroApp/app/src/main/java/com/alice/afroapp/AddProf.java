@@ -46,6 +46,7 @@ public class AddProf extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -135,15 +136,11 @@ public class AddProf extends AppCompatActivity {
             database.setMentor(fullname,proficiency,location,email,imageUrl,
                     "");
 
-            String pushId=mDatabaseReference.push().getKey();
-            Intent intent = new Intent(AddProf.this, MyProfile.class);
-            intent.putExtra("pushId",pushId);
-            startActivity(intent);
         }
 
         else{
             Toast.makeText(AddProf.this,
-                    "profile already exist",Toast.LENGTH_LONG).show();
+                    "profile not created",Toast.LENGTH_LONG).show();
 
         }
 

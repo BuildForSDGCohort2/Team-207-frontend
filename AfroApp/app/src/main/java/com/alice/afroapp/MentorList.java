@@ -50,11 +50,6 @@ public class MentorList extends AppCompatActivity {
 
         mFirebaseAuth = FirebaseAuth.getInstance();
 
-//        circleImageView = (CircleImageView) findViewById(R.id.circleImage);
-//        String imageUrl = mFirebaseAuth.getCurrentUser().getPhotoUrl().toString();
-//        Picasso.with(this).load(imageUrl)
-//               .placeholder(R.drawable.ic_account_circle_black_24dp).into(circleImageView);
-
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

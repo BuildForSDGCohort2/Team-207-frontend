@@ -24,6 +24,7 @@ public class Post extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuth;
     private EditText editQuestiion;
     private ImageButton postButton;
+    private NewQuestion question;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,17 +99,20 @@ public class Post extends AppCompatActivity {
         String title = editQuestiion.getText().toString();
         String username = mFirebaseAuth.getCurrentUser().getDisplayName();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        Database datbase = new Database();
-        if(editQuestiion != null ){
-            datbase.setQuestion(username,title);
-        }
-        else {
-            Toast.makeText(this,"enter question",Toast.LENGTH_LONG).show();
+        Database database = new Database();
+        database.setQuestion(username,title);
 
-        }
-//        Intent intent= new Intent(Post.this,QuestionsActivity.class);
-//        startActivity(intent);
 
+        Toast.makeText(this,"posted",Toast.LENGTH_LONG).show();
+
+ //       if( question.getId().equals()== null ){
+//            datbase.setQuestion(username,title);
+//        }
+//        else {
+//            Toast.makeText(this,"enter question",
+//                    Toast.LENGTH_LONG).show();
+//
+//        }
 
     }
 
