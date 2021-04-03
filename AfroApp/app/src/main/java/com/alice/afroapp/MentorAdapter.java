@@ -2,6 +2,7 @@ package com.alice.afroapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -120,6 +121,7 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
             fullname.setText(mentor.getFullname());
             profieciency.setText(mentor.getProficiency());
             location.setText(mentor.getLocation());
+           // circleImageView.setImageURI(Uri.parse(mentor.getImageUrl()));
             String imagerUrl = mentor.getImageUrl();
             if(imagerUrl!= null){
                 Picasso.with(itemView.getContext())

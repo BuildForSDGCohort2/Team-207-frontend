@@ -175,7 +175,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editEmail"
         android:layout_width="@dimen/editwidth"
         android:layout_height="wrap_content"
         android:background="@drawable/addprof"

@@ -13,7 +13,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -23,9 +22,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -43,6 +39,7 @@ public class AddProf extends AppCompatActivity {
     private ImageView imageView;
     private ImageButton selectButton;
     private CircleImageView circleImageView;
+    private Mentor mentor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +62,7 @@ public class AddProf extends AppCompatActivity {
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mDatabaseReference = mFirebaseDatabase.getReference().child("mentors");
+        mDatabaseReference = mFirebaseDatabase.getReference().child("Mentors");
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -130,20 +127,8 @@ public class AddProf extends AppCompatActivity {
         String imageUrl = mFirebaseAuth.getCurrentUser().getPhotoUrl().toString();
         String username = mFirebaseAuth.getCurrentUser().getDisplayName();
         Database database = new Database();
-
-        if(mDatabaseReference.push().getKey()== null){
-
-            database.setMentor(fullname,proficiency,location,email,imageUrl,
+        database.setMentor(fullname,proficiency,location,email,imageUrl,
                     "");
-
-        }
-
-        else{
-            Toast.makeText(AddProf.this,
-                    "profile not created",Toast.LENGTH_LONG).show();
-
-        }
-
     }
 
     public void GoProf(){

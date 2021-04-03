@@ -20,6 +20,9 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class EditActivity extends AppCompatActivity {
@@ -33,6 +36,7 @@ public class EditActivity extends AppCompatActivity {
     private CircleImageView circleImageView;
     private Mentor mentor;
     private String editId;
+    private Database database;
 
 
 
@@ -54,7 +58,6 @@ public class EditActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String pushId = intent.getStringExtra("pushId");
-        editId = pushId;
 
 
 
@@ -73,6 +76,7 @@ public class EditActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot postSnapshot:snapshot.getChildren()){
 
+
                     String setProf = postSnapshot.child("fullname")
                             .getValue(String.class).toString();
                     editProf.setText(setProf);
@@ -85,17 +89,23 @@ public class EditActivity extends AppCompatActivity {
                             .getValue(String.class).toString();
                     editLoc.setText(setLoc);
 
-//                    String setEmail = postSnapshot.child("email")
-//                            .getValue(String.class).toString();
-//                    editEmail.setText(setEmail);
+                    String setEmail = postSnapshot.child("email")
+                            .getValue(String.class).toString();
+                    editEmail.setText(setEmail);
 
+                    String key = postSnapshot.getKey().toString();
 
-                   String imageUrl = postSnapshot.child("imageUrl").
+                    editId = key;
+
+                    String imageUrl = postSnapshot.child("imageUrl").
                             getValue(String.class).toString();
-                   Picasso.with(EditActivity.this).load(imageUrl)
+                    Picasso.with(EditActivity.this).load(imageUrl)
                             .placeholder(R.drawable.
                                     ic_account_circle_black_24dp)
                             .into(circleImageView);
+
+
+
                 }
 
             }
@@ -119,8 +129,21 @@ public class EditActivity extends AppCompatActivity {
         String imageUrl = mFirebaseAuth.getCurrentUser().getPhotoUrl().toString();
         String username = mFirebaseAuth.getCurrentUser().getDisplayName();
 
-        Database database = new Database();
-        database.setMentor(fullname,proficiency,location,email,imageUrl,"");
+        Mentor mentor = new Mentor(editId,fullname,proficiency,location
+                ,email,imageUrl,"");
+
+        DatabaseReference aliceRef = mDatabaseReference.child(editId);
+        Map<String, Object> aliceUpdates = new HashMap<>();
+        aliceUpdates.put("proficiency", proficiency);
+
+        aliceRef.updateChildren(aliceUpdates);
+
+//        mDatabaseReference.child("Mentors").child(editId).setValue(mentor);
+
+
+
+        Toast.makeText(EditActivity.this,"name updated"
+                ,Toast.LENGTH_LONG).show();
 
 
     }

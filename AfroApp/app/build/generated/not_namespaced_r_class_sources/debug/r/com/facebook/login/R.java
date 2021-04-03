@@ -732,7 +732,7 @@ public final class R {
         public static final int decor_content_parent = 0x7f0a0068;
         public static final int default_activity_button = 0x7f0a0069;
         public static final int display_always = 0x7f0a0072;
-        public static final int edit_query = 0x7f0a0085;
+        public static final int edit_query = 0x7f0a0084;
         public static final int end_padder = 0x7f0a008f;
         public static final int expand_activities_button = 0x7f0a0093;
         public static final int expanded_menu = 0x7f0a0094;

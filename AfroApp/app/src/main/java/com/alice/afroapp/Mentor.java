@@ -5,8 +5,8 @@ import java.io.Serializable;
 public class Mentor implements Serializable {
 
 
-    private  String mentorId;
-    private  String fullname;
+    private String mentorId;
+    private String fullname;
     private String proficiency;
     private String location;
     private String email;

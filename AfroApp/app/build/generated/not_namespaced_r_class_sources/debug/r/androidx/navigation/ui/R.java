@@ -1063,7 +1063,7 @@ public final class R {
         public static final int design_menu_item_action_area_stub = 0x7f0a006c;
         public static final int design_menu_item_text = 0x7f0a006d;
         public static final int design_navigation_view = 0x7f0a006e;
-        public static final int edit_query = 0x7f0a0085;
+        public static final int edit_query = 0x7f0a0084;
         public static final int end = 0x7f0a008e;
         public static final int expand_activities_button = 0x7f0a0093;
         public static final int expanded_menu = 0x7f0a0094;

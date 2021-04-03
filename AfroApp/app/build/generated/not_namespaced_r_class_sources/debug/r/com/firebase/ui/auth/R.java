@@ -1240,8 +1240,8 @@ public final class R {
         public static final int design_menu_item_text = 0x7f0a006d;
         public static final int design_navigation_view = 0x7f0a006e;
         public static final int dynamic = 0x7f0a007c;
-        public static final int edit_phone_number = 0x7f0a0084;
-        public static final int edit_query = 0x7f0a0085;
+        public static final int edit_phone_number = 0x7f0a0083;
+        public static final int edit_query = 0x7f0a0084;
         public static final int email = 0x7f0a0086;
         public static final int email_button = 0x7f0a0088;
         public static final int email_footer_tos_and_pp_text = 0x7f0a0089;

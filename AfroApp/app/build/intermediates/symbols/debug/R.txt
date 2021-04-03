@@ -1439,9 +1439,9 @@ int id editName 0x7f0a007f
 int id editProf 0x7f0a0080
 int id editProficiency 0x7f0a0081
 int id editQuestion 0x7f0a0082
-int id editText2 0x7f0a0083
-int id edit_phone_number 0x7f0a0084
-int id edit_query 0x7f0a0085
+int id edit_phone_number 0x7f0a0083
+int id edit_query 0x7f0a0084
+int id editt 0x7f0a0085
 int id email 0x7f0a0086
 int id email_addtext 0x7f0a0087
 int id email_button 0x7f0a0088

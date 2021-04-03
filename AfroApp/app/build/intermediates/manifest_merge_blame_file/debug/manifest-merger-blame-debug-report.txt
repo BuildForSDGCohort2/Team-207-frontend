@@ -46,7 +46,7 @@
 26        android:theme="@style/AppTheme" >
 26-->C:\Users\Alice\AndroidStudioProjects\AfroApp\Team-207\Team-207-frontend\AfroApp\app\src\main\AndroidManifest.xml:15:9-40
 27        <activity android:name="com.alice.afroapp.EditActivity" />
-27-->C:\Users\Alice\AndroidStudioProjects\AfroApp\Team-207\Team-207-frontend\AfroApp\app\src\main\AndroidManifest.xml:16:9-59
+27-->C:\Users\Alice\AndroidStudioProjects\AfroApp\Team-207\Team-207-frontend\AfroApp\app\src\main\AndroidManifest.xml:16:9-50
 27-->C:\Users\Alice\AndroidStudioProjects\AfroApp\Team-207\Team-207-frontend\AfroApp\app\src\main\AndroidManifest.xml:16:19-47
 28        <activity
 28-->C:\Users\Alice\AndroidStudioProjects\AfroApp\Team-207\Team-207-frontend\AfroApp\app\src\main\AndroidManifest.xml:17:9-20:59

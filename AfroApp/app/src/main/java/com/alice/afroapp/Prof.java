@@ -43,8 +43,8 @@ public class Prof extends AppCompatActivity {
     private ChildEventListener mChildEventListerner;
     private ValueEventListener mValueEventListener;
     private ArrayList<Mentor> mentors;
-    private  Mentor mentor;
-    private  String imageUrl;
+    private Mentor mentor;
+    private String imageUrl;
     private CircleImageView circleImageView;
 
     @Override
@@ -70,6 +70,7 @@ public class Prof extends AppCompatActivity {
 
         Intent intent = getIntent();
         String Currentname = intent.getStringExtra("name");
+       // String displayName = mFirebaseAuth.getCurrentUser().getDisplayName();
         final Query itemFilter = mDatabaseReference.orderByChild("fullname")
                 .equalTo(Currentname);
 
@@ -78,13 +79,20 @@ public class Prof extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot postSnapshot:snapshot.getChildren()){
-                fullname.setText(postSnapshot.child("fullname").getValue(String.class).toString());
-                proficiency.setText(postSnapshot.child("proficiency").getValue(String.class).toString());
-                location.setText(postSnapshot.child("location").getValue(String.class).toString());
-                email.setText(postSnapshot.child("email").getValue(String.class).toString());
-                String imageUrl = postSnapshot.child("imageUrl").getValue(String.class).toString();
+                fullname.setText(postSnapshot.child("fullname")
+                        .getValue(String.class)
+                        .toString());
+                proficiency.setText(postSnapshot.child("proficiency").
+                        getValue(String.class).toString());
+                location.setText(postSnapshot.child("location")
+                        .getValue(String.class).toString());
+                email.setText(postSnapshot.child("email")
+                        .getValue(String.class).toString());
+                String imageUrl = postSnapshot.child("imageUrl").
+                        getValue(String.class).toString();
                     Picasso.with(Prof.this).load(imageUrl)
-                            .placeholder(R.drawable.ic_account_circle_black_24dp).into(circleImageView);
+                            .placeholder(R.drawable.ic_account_circle_black_24dp)
+                            .into(circleImageView);
                 }
 
             }

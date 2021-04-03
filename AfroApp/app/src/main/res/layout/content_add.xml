@@ -149,7 +149,7 @@
         android:gravity="start|top"
         android:importantForAutofill="no"
         android:inputType="textMultiLine|textEmailAddress"
-        android:labelFor="@+id/editEmail"
+        android:labelFor="@+id/editt"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toTopOf="@+id/textView5" />
 
