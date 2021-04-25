@@ -59,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setIcon(R.drawable.sidetitle);
 
 
-
-
 //        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 //        NavigationUI.setupActionBarWithNavController(this, navController);
 //        NavigationUI.setupWithNavController(navView, navController);
@@ -91,12 +89,12 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,"Home.",
                         Toast.LENGTH_LONG).show();
                 return true;
-                case R.id.action_signout:
+                case R.id.action_profile:
+                    mentorSearch();
+                return  true;
+            case R.id.action_signout:
                 FirebaseAuth.getInstance()
                         .signOut();
-                return  true;
-            case R.id.action_profile:
-                showProfile();
                 return true;
 
             default: return super.onOptionsItemSelected(item);
@@ -132,7 +130,8 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 // ...
             } else {
-                Toast.makeText(this,"SignIn failed.",Toast.LENGTH_LONG).show();
+                Toast.makeText(this,"SignIn failed.",Toast.LENGTH_LONG)
+                        .show();
 
             }
         }
@@ -148,17 +147,20 @@ public class MainActivity extends AppCompatActivity {
         mFirebaseAuth.removeAuthStateListener(mAuth);
     }
 
+
     //function to go to listActivity
     public void ViewList(MenuItem item) {
         Intent intent= new Intent(MainActivity.this,
                 QuestionsActivity.class);
         startActivity(intent);
-        Toast.makeText(this,"Questions list.",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Questions list.",
+                Toast.LENGTH_LONG).show();
     }
 
+
     //function to view comments
-    public void ViewComments(MenuItem item) { Intent intent= new Intent(
-            MainActivity.this,Post.class);
+    public void ViewComments(MenuItem item)
+    { Intent intent= new Intent(MainActivity.this,Post.class);
         startActivity(intent);
     }
 
@@ -178,14 +180,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void MentorSignUp(MenuItem item) {
-        Intent intent= new Intent
-                (MainActivity.this,AddProf.class);
+        Intent intent= new Intent(MainActivity.this,AddProf.class);
         startActivity(intent);
     }
 
     public void Post(){
-        Intent intent= new Intent(
-                MainActivity.this,Post.class);
+        Intent intent= new Intent(MainActivity.this,Post.class);
         startActivity(intent);
     }
 
@@ -197,6 +197,12 @@ public class MainActivity extends AppCompatActivity {
     public void showProfile(){
         Intent intent= new Intent(MainActivity.this,MyProfile.class);
         startActivity(intent);
+    }
+
+    public void mentorSearch(){
+        Intent intent= new Intent(MainActivity.this,SearchActivity.class);
+        startActivity(intent);
+
     }
 
 

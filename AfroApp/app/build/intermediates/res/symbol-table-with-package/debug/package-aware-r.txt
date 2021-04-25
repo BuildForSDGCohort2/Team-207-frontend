@@ -1521,7 +1521,9 @@ id logo_image
 id main_tos_and_pp
 id masked
 id media_actions
+id mentor_fullname
 id mentor_list
+id mentor_location
 id message
 id microsoft_signin_button
 id middle
@@ -1612,6 +1614,7 @@ id showHome
 id showTitle
 id sign_in_email_sent_header_text
 id sign_in_email_sent_text
+id simpleSearchView
 id small
 id smallLabel
 id snackbar_action
@@ -1746,6 +1749,7 @@ layout activity_my_profile
 layout activity_post
 layout activity_prof
 layout activity_questions
+layout activity_search
 layout activity_solutions
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -1803,6 +1807,7 @@ layout fui_welcome_back_idp_prompt_layout
 layout fui_welcome_back_password_prompt_layout
 layout list_item_question
 layout list_item_solution
+layout location_rows
 layout mentor_row
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include

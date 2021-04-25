@@ -40,7 +40,8 @@ public class MentorList extends AppCompatActivity {
 
         RecyclerView mentor_list = (RecyclerView) findViewById(R.id.mentor_list);
 
-        LinearLayoutManager messageLayoutManager = new LinearLayoutManager(this,
+        LinearLayoutManager messageLayoutManager = new LinearLayoutManager(
+                this,
                 LinearLayoutManager.VERTICAL,
                 false);
         mentor_list.setLayoutManager(messageLayoutManager);

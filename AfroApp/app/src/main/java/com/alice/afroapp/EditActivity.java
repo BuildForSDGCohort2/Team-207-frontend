@@ -137,6 +137,7 @@ public class EditActivity extends AppCompatActivity {
         aliceUpdates.put("proficiency", proficiency);
 
         aliceRef.updateChildren(aliceUpdates);
+        
 
 //        mDatabaseReference.child("Mentors").child(editId).setValue(mentor);
 
