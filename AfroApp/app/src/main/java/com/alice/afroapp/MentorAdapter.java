@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,11 +23,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder> {
+public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder>implements Filterable {
     private ArrayList<Mentor> mentors;
+    private ArrayList<Mentor> mentorslist;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
     private ChildEventListener mChildEventListerner;
@@ -39,6 +43,7 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference().child("Mentors");
         mentors = new ArrayList<Mentor>();
+        mentorslist = new ArrayList<Mentor>();
         mChildEventListerner = new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
@@ -62,7 +67,8 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
             }
 
             @Override
-            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+            public void onChildMoved(@NonNull DataSnapshot snapshot,
+                                     @Nullable String previousChildName) {
 
             }
 
@@ -80,7 +86,8 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
-        View itemView = LayoutInflater.from(context).inflate(R.layout.mentor_row,parent,false);
+        View itemView = LayoutInflater.from(context).inflate
+                (R.layout.mentor_row,parent,false);
         return new ViewHolder(itemView);
     }
 
@@ -94,6 +101,64 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
     public int getItemCount() {
         return mentors.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return filter;
+    }
+
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+
+            mentors = new ArrayList<Mentor>();
+
+            if(charSequence.toString().isEmpty()){
+                mChildEventListerner = new ChildEventListener() {
+                    @Override
+                    public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                        Mentor mentor = snapshot.getValue(Mentor.class);
+                        mentors.add(mentor);
+                        String imagerUrl = mentor.getImageUrl();
+                        String imageUr = imagerUrl;
+
+                        notifyItemInserted(mentors.size()-1);
+                    }
+
+                    @Override
+                    public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+
+                    }
+
+                    @Override
+                    public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                    }
+
+                    @Override
+                    public void onChildMoved(@NonNull DataSnapshot snapshot,
+                                             @Nullable String previousChildName) {
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                };
+                mDatabaseReference.addChildEventListener(mChildEventListerner);
+                
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+
+        }
+    };
 
     public class ViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
@@ -121,7 +186,6 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
             fullname.setText(mentor.getFullname());
             profieciency.setText(mentor.getProficiency());
             location.setText(mentor.getLocation());
-           // circleImageView.setImageURI(Uri.parse(mentor.getImageUrl()));
             String imagerUrl = mentor.getImageUrl();
             if(imagerUrl!= null){
                 Picasso.with(itemView.getContext())

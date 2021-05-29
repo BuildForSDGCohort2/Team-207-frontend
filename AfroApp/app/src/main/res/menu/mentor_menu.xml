@@ -9,5 +9,14 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/action_list"
-        android:title="item" />
+        android:icon="@drawable/ic_list_black_24dp"
+        android:title="@string/back_home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="search"
+        app:showAsAction="always|collapseActionView"
+         app:actionViewClass="android.widget.SearchView"/>
 </menu>

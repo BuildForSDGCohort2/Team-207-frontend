@@ -791,18 +791,21 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color primarytextcolor
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color secondarytextcolor
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color textcolor
 color tooltip_background_dark
 color tooltip_background_light
 dimen abc_action_bar_content_inset_material
@@ -1223,6 +1226,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dev
+drawable devlogo
 drawable devs
 drawable devv
 drawable fui_ic_anonymous_white_24dp
@@ -1286,10 +1290,12 @@ drawable ic_post_add_black_18dp
 drawable ic_post_add_white_18dp
 drawable ic_search_black_24dp
 drawable ic_send_black_24dp
+drawable loginlogo
 drawable logo
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable newlogo
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1333,6 +1339,7 @@ id action_goback
 id action_home
 id action_image
 id action_list
+id action_mentorlist
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -1341,6 +1348,7 @@ id action_mode_close_button
 id action_myprofile
 id action_profile
 id action_questions_list
+id action_search
 id action_set
 id action_signout
 id action_text
@@ -1488,7 +1496,6 @@ id image
 id imageButton
 id imageButton2
 id imageView
-id imageView10
 id imageView11
 id imageView12
 id imageView2
@@ -1497,7 +1504,6 @@ id imageView4
 id imageView5
 id imageView6
 id imageView7
-id imageView8
 id imageView9
 id info
 id inline
@@ -1515,6 +1521,7 @@ id line3
 id listMode
 id list_item
 id loc_text
+id location_recycler
 id location_text
 id logo
 id logo_image
@@ -1743,6 +1750,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add
 layout activity_edit
+layout activity_login
 layout activity_main
 layout activity_mentor_list
 layout activity_my_profile
@@ -2351,6 +2359,7 @@ style FirebaseUI_TopProgressBar
 style FirebaseUI_Transparent
 style FirebaseUI_VerifyPhoneButton
 style FirebaseUI_WrapperStyle
+style Logintheme
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents

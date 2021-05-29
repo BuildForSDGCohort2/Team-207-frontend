@@ -99,7 +99,7 @@ public class AddProf extends AppCompatActivity {
             case R.id.action_myprofile:
                 GoProf();
                 return true;
-            case R.id.action_list:
+            case R.id.action_mentorlist:
                 GoList();
                 return true;
             default: return super.onOptionsItemSelected(item);

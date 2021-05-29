@@ -15,7 +15,7 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_list"
+        android:id="@+id/action_mentorlist"
         android:icon="@drawable/ic_list_black_24dp"
         android:title="@string/View_list"
         app:showAsAction="never" />

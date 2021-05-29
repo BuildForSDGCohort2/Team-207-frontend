@@ -26,6 +26,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.alice.afroapp.LoginActivity" />
         <activity android:name="com.alice.afroapp.SearchActivity" />
         <activity android:name="com.alice.afroapp.EditActivity" />
         <activity
