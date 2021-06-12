@@ -37,7 +37,6 @@ public class MentorList extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.sidetitle);
 
         RecyclerView mentor_list = (RecyclerView) findViewById(R.id.mentor_list);
 

@@ -888,6 +888,10 @@
         "source": "C:\\Users\\Alice\\.gradle\\caches\\transforms-2\\files-2.1\\8156c1d632e989f7c8b54339baffbe73\\appcompat-1.0.2\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
+        "merged": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_unnamed.png.flat",
+        "source": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\src\\main\\res\\drawable\\unnamed.png"
+    },
+    {
         "merged": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_list_divider_material.xml.flat",
         "source": "C:\\Users\\Alice\\.gradle\\caches\\transforms-2\\files-2.1\\8156c1d632e989f7c8b54339baffbe73\\appcompat-1.0.2\\res\\drawable-v21\\abc_list_divider_material.xml"
     },
@@ -1694,10 +1698,6 @@
     {
         "merged": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
         "source": "C:\\Users\\Alice\\.gradle\\caches\\transforms-2\\files-2.1\\7033a13de051cd9ac71fd158e9fba23d\\play-services-base-17.1.0\\res\\color\\common_google_signin_btn_tint.xml"
-    },
-    {
-        "merged": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_newlogo.png.flat",
-        "source": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\src\\main\\res\\drawable\\newlogo.png"
     },
     {
         "merged": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -2774,6 +2774,10 @@
     {
         "merged": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_delete_black_24dp.xml.flat",
         "source": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\src\\main\\res\\drawable\\ic_delete_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_updatedlogo.gif.flat",
+        "source": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\src\\main\\res\\drawable\\updatedlogo.gif"
     },
     {
         "merged": "C:\\Users\\Alice\\AndroidStudioProjects\\AfroApp\\Team-207\\Team-207-frontend\\AfroApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_com_facebook_button_icon_white.png.flat",

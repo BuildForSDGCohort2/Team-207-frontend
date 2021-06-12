@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +21,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -111,7 +114,7 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
         @Override
         protected FilterResults performFiltering(CharSequence charSequence) {
 
-            mentors = new ArrayList<Mentor>();
+            ArrayList<Mentor> filteredList = new ArrayList<Mentor>();
 
             if(charSequence.toString().isEmpty()){
                 mChildEventListerner = new ChildEventListener() {
@@ -119,8 +122,6 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
                     public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
                         Mentor mentor = snapshot.getValue(Mentor.class);
                         mentors.add(mentor);
-                        String imagerUrl = mentor.getImageUrl();
-                        String imageUr = imagerUrl;
 
                         notifyItemInserted(mentors.size()-1);
                     }
@@ -148,7 +149,34 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.ViewHolder
                     }
                 };
                 mDatabaseReference.addChildEventListener(mChildEventListerner);
+                filteredList.addAll(mentors);
                 
+            }
+            else {
+
+//                final Query nameFilter = mDatabaseReference.orderByChild("fullname")
+//                        .equalTo(displayName);
+
+
+//                nameFilter.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                        for(DataSnapshot postSnapshot:snapshot.getChildren()){
+//
+//
+//                        }
+//
+//
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                        Toast.makeText(MyProfile.this,
+//                                "Connection error",Toast.LENGTH_LONG)
+//                                .show();
+//                    }
+//                });
             }
 
             return null;

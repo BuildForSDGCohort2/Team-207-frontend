@@ -58,7 +58,6 @@ public class MyProfile extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.sidetitle);
 
         fullname = (TextView) findViewById(R.id.fullname_text);
         proficiency = (TextView) findViewById(R.id.profciency_text);

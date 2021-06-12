@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.sidetitle);
+       // getSupportActionBar().setIcon(R.drawable.updatedlog);
 
 
 //        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

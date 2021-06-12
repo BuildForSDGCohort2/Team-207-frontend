@@ -1295,7 +1295,6 @@ drawable logo
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
-drawable newlogo
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1314,6 +1313,8 @@ drawable sidetitle
 drawable submitt_shape
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable unnamed
+drawable updatedlogo
 font actor
 id ALT
 id CTRL
@@ -1437,7 +1438,6 @@ id divider2
 id divider3
 id divider4
 id divider5
-id divider6
 id divider7
 id divider8
 id divider9
